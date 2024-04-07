@@ -4,10 +4,12 @@
   "description": "An Electron application using a Daily custom call object",
   "main": "main/main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron-forge start",
     "dev-start": "electron . -dev",
     "lint": "eslint ./",
-    "lintFix": "eslint ./ --fix"
+    "lintFix": "eslint ./ --fix",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "repository": "https://github.com/daily-demos/electron-overlay",
   "keywords": [
@@ -20,11 +22,18 @@
   "author": "Liza Shulyayeva",
   "license": "CC0-1.0",
   "dependencies": {
-    "@daily-co/daily-js": "^0.43.0",
-    "electron": "^22.0.0",
+    "@daily-co/daily-js": "^0.62.0",
+    "electron-squirrel-startup": "^1.0.0",
     "electron-traywindow-positioner": "^1.1.1"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^7.3.1",
+    "@electron-forge/maker-deb": "^7.3.1",
+    "@electron-forge/maker-rpm": "^7.3.1",
+    "@electron-forge/maker-squirrel": "^7.3.1",
+    "@electron-forge/maker-zip": "^7.3.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.3.1",
+    "electron": "^28.2.1",
     "eslint": "^8.29.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -32,5 +41,13 @@
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.1"
+  },
+  "mac": {
+    "extendInfo": {
+      "NSMicrophoneUsageDescription": "Please give us access to your microphone",
+      "NSCameraUsageDescription": "Please give us access to your camera",
+      "com.apple.security.device.audio-input": true,
+      "com.apple.security.device.camera": true
+    }
   }
 }

@@ -30,3 +30,9 @@ Let us know how experimenting with this demo goes! Feel free to reach out to us 
 - Try limiting the number of tiles that can appear by default on the screen, avoiding over-crowding in large calls.
 - Try allowing users to increase the size of a tile (for example, maybe someone wants to increase a user's tile size when they are screen shaing?)
 - Experiment with adding ways for a user to snap or "tidy" their tiles into convenient layouts on the screen.
+
+
+
+
+https://stackoverflow.com/questions/72024011/electron-app-not-asking-for-camera-and-microphone-permission-on-macos-monterey
+
