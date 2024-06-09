@@ -1,5 +1,6 @@
 :root {
   --font-family: "Roboto", "Helvetica Neue", Sans-Serif;
+  --usersize: 240px;
 }
 
 html,
@@ -30,8 +31,8 @@ body {
 }
 
 #tiles .tile {
-  width: 120px;
-  height: 120px;
+  width: var(--usersize);
+  height: var(--usersize);
   border-radius: 25px;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(45deg, #121a24, #2b3f56);
@@ -179,7 +180,7 @@ video {
 
 .participant {
   position: relative;
-  width: 120px;
+  width: var(--usersize);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -201,7 +202,8 @@ video {
   line-height: 16px;
   color: #ffffff;
   position: absolute;
-  top: 97px;
+  /* top: var(--usersize) - 23px; */
+  top: 217px;
   box-sizing: border-box;
   text-align: center;
 }
@@ -230,8 +232,10 @@ video {
   width: 32px;
   height: 32px;
   position: absolute;
-  top: calc(120px / 2 - 32px / 2);
-  left: calc(120px / 2 - 32px / 2);
+  /* top: calc(var(--usersize) / 2 - 32px / 2);
+  left: calc(var(--usersize) / 2 - 32px / 2); */
+  top: calc(240px / 2 - 32px / 2);
+  left: calc(240px / 2 - 32px / 2);
   display: none;
 }
 

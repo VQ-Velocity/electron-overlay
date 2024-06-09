@@ -8,7 +8,11 @@ const {
   MenuItem,
   shell,
   globalShortcut,
+  systemPreferences,
 } = require('electron');
+
+const microphone = systemPreferences.askForMediaAccess('microphone');
+const camera = systemPreferences.askForMediaAccess('camera');
 
 const path = require('path');
 const positioner = require('electron-traywindow-positioner');
